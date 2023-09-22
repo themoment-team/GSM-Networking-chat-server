@@ -1,4 +1,4 @@
-package com.gsmNetworking.chat.global.error.model
+package com.gsmNetworking.chat.common.error.model
 
 class ExceptionResponse(
     val message: String

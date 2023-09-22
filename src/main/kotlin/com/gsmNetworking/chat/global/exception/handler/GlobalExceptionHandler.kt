@@ -1,7 +1,7 @@
-package com.gsmNetworking.chat.global.error.handler
+package com.gsmNetworking.chat.global.exception.handler
 
-import com.gsmNetworking.chat.global.error.exception.ExpectedException
-import com.gsmNetworking.chat.global.error.model.ExceptionResponse
+import com.gsmNetworking.chat.common.error.exception.ExpectedException
+import com.gsmNetworking.chat.common.error.model.ExceptionResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice

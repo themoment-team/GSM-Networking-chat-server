@@ -1,6 +1,5 @@
-package com.gsmNetworking.chat.global.error.exception
+package com.gsmNetworking.chat.common.error.exception
 
-import com.gsmNetworking.chat.global.error.model.ErrorCode
 import org.springframework.http.HttpStatus
 
 open class ExpectedException(
