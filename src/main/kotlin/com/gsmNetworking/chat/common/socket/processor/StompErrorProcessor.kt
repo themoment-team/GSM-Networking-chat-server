@@ -15,7 +15,9 @@ class StompErrorProcessor(
 ) {
 
     init {
-        require(senders.isNotEmpty()) { "하나 이상의 StompErrorSender를 등록해야 합니다" }
+        require(senders.isNotEmpty()) {
+            "하나 이상의 StompErrorSender를 등록해야 합니다"
+        }
     }
 
     /**
@@ -27,7 +29,7 @@ class StompErrorProcessor(
         val supportedSenders = senders.filter { it.supports(ex.javaClass) }
 
         if (supportedSenders.isEmpty()) {
-            throw IllegalStateException("지원하는 senders가 존재하지 않습니다 : ${ex.javaClass}")
+            throw IllegalStateException("${ex.javaClass}를 처리를 지원하는 senders가 존재하지 않습니다")
         }
 
         supportedSenders.forEach { sender ->
