@@ -8,9 +8,10 @@ import com.gsmNetworking.chat.common.error.model.ErrorCode
  *
  * @param code
  * @param message
+ * @param userId
  */
-class UserStompException(
+open class UserStompException(
     code: ErrorCode = ErrorCode.DEFAULT,
-    message: String
-) : StompException(code, message) {
-}
+    message: String,
+    userId: Long
+): StompException(code, message)
