@@ -13,6 +13,6 @@ import java.util.UUID
 class RoomStompException(
     code: ErrorCode = ErrorCode.DEFAULT,
     message: String,
-    val userId: UUID
+    val userId: Long
 ) : StompException(code, message) {
 }
