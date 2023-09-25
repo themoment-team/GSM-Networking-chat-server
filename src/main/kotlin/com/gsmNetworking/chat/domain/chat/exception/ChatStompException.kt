@@ -2,6 +2,7 @@ package com.gsmNetworking.chat.domain.chat.exception
 
 import com.gsmNetworking.chat.common.error.exception.StompException
 import com.gsmNetworking.chat.common.error.model.ErrorCode
+import java.util.*
 
 /**
  * [StompException]의 구현체, Chat 도메인에서 발생한 예외에 대한 설명을 Client에게 전달하기 위해 사용합니다.
@@ -11,6 +12,7 @@ import com.gsmNetworking.chat.common.error.model.ErrorCode
  */
 class ChatStompException(
     code: ErrorCode = ErrorCode.DEFAULT,
-    message: String
+    message: String,
+    val roomId: UUID
 ) : StompException(code, message) {
 }
